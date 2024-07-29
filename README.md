@@ -1,8 +1,12 @@
-Clone the repo then ->  npm install 
-then npm run dev
+Clone the repo
+Clone the repo - https://github.com/Kalpanathmajhi/rabbittask
+ then ->  npm install 
+then -> npm run dev
 
 start the backend
+
 cd backend
+
 then node server.js
 
 
