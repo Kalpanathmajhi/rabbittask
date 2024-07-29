@@ -1,0 +1,22 @@
+div {
+    margin-top: 1 rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+input {
+    padding: auto;
+    width: 100%;
+    max-width: 300px;
+    color: black;
+}
+
+button {
+    padding: 1rem;
+    background-color: blue;
+    color: white;
+
+}
