@@ -23,4 +23,11 @@ http://localhost:3000/userProfile for user profile
 http://localhost:3000/taskMnagement for task management
 
 
+Used - Next.js and react in frontend 
+
+Node.js and express.js in backend
+
+local storage -  no aditional database
+
+
 
