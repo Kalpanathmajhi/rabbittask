@@ -2,7 +2,7 @@
 import React from 'react'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
-import  "./form.css"
+import "./form.css"
 const UserRegForm = () => {
     const validation = Yup.object().shape({
         email: Yup.string().email("Invalid email, please enter a correct one ").required("Email is required"),
@@ -16,36 +16,42 @@ const UserRegForm = () => {
     }
 
     return (
-        <div>
+        <div className='from-data'>
 
-            <h1> User registration form</h1>
-            <Formik
-                initialValues={{ email: '', username: '', password: '' }}
-                validationSchema={validation}
-                onSubmit={handelSubmit}
-            >
-                {({ isSubmit }) => (
-                    <Form>
-                        <div>
-                            <label>Email:</label>
-                            <Field type="email" name="email" />
-                            <ErrorMessage name='email' component="div" />
-                        </div>
-                        <div>
-                            <label>Username</label>
-                            <Field type="username" name="username" />
-                            <ErrorMessage name='username' component="div" />
-                        </div>
-                        <div>
-                            <label>Password</label>
-                            <Field type="password" name="password" />
-                            <ErrorMessage name='password' component="div" />
-                        </div>
-                        <button type="submit" disabled={isSubmit}>Registration</button>
+           <div className='from-data1'>
+           <div>
+                <h1> User registration form</h1>
+            </div>
+            <div>
+                <Formik
+                    initialValues={{ email: '', username: '', password: '' }}
+                    validationSchema={validation}
+                    onSubmit={handelSubmit}
+                >
+                    {({ isSubmit }) => (
+                        <Form>
+                            <div>
+                                <label>Email:</label>
+                                <Field type="email" name="email" />
+                                <ErrorMessage name='email' component="div" />
+                            </div>
+                            <div>
+                                <label>Username</label>
+                                <Field type="username" name="username" />
+                                <ErrorMessage name='username' component="div" />
+                            </div>
+                            <div>
+                                <label>Password</label>
+                                <Field type="password" name="password" />
+                                <ErrorMessage name='password' component="div" />
+                            </div>
+                            <button type="submit" disabled={isSubmit}>Registration</button>
 
-                    </Form>
-                )}
-            </Formik>
+                        </Form>
+                    )}
+                </Formik>
+            </div>
+           </div>
         </div>
     )
 
